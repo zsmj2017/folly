@@ -34,10 +34,10 @@ struct Bar : Foo {
 struct Toc : Bar {};
 } // namespace
 
-TEST_F(TypeInfoTest, exanples) {
-  EXPECT_EQ(typeid(Foo), *folly::type_info_of<Foo>());
-  EXPECT_EQ(typeid(Foo), *folly::type_info_of(Foo()));
-  EXPECT_EQ(typeid(Foo), *folly::type_info_of(static_cast<Foo const&>(Bar())));
-  EXPECT_EQ(typeid(Bar), *folly::type_info_of(static_cast<Bar const&>(Bar())));
-  EXPECT_EQ(typeid(Toc), *folly::type_info_of(static_cast<Bar const&>(Toc())));
-}
+//TEST_F(TypeInfoTest, exanples) {
+//  EXPECT_EQ(typeid(Foo), *folly::type_info_of<Foo>());
+//  EXPECT_EQ(typeid(Foo), *folly::type_info_of(Foo()));
+//  EXPECT_EQ(typeid(Foo), *folly::type_info_of(static_cast<Foo const&>(Bar())));
+//  EXPECT_EQ(typeid(Bar), *folly::type_info_of(static_cast<Bar const&>(Bar())));
+//  EXPECT_EQ(typeid(Toc), *folly::type_info_of(static_cast<Bar const&>(Toc())));
+//}
